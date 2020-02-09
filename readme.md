@@ -47,7 +47,9 @@ The `(test-storage!)` function called in
 know why. Right now its commented out. It works fine in the original
 lein/figwheel version.
 
-Any help with this would be greatly appreciated.
+Any help with these issues would be greatly appreciated. Once its made to work,
+it becomes a good template for building chrome extensions with chromex and
+shadow-cljs.
 
 ----
 ## You can ignore the rest for now, it is the lein/figwheel instructions from the original chromes-sample
