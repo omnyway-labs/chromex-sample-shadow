@@ -1,0 +1,19 @@
+{:dependencies [[binaryage/devtools "1.0.0"]
+                [binaryage/chromex "0.8.6"]]
+ :source-paths ["src/background"
+                 "src/popup"
+                 "src/content_script"]
+ :builds
+ {:extension
+  {:target           :chrome-extension
+   :extension-dir    "resources/unpacked"
+   :manifest-file    "resources/unpacked/manifest.edn"
+   :compiler-options {:closure-output-charset "US-ASCII"}
+   :outputs
+   {:browser-action {:output-type :chrome/browser-action
+                     :init-fn chromex-sample.popup/init!}
+    :background     {:output-type :chrome/background
+                     :init-fn     chromex-sample.background/init!}
+    :content-script {:output-type :chrome/single-file
+                     :entries     [chromex-sample.content-script]}}}}}
+
