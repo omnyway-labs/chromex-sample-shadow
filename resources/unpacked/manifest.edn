@@ -11,7 +11,7 @@
                   {:init-fn chromex-sample.background.core/init!}
 
                   :content-script
-                  {:init-fn chromex-sample.content-script/init!
+                  {:init-fn chromex-sample.content-script.core/init!
                    :chrome/options {:matches ["<all_urls>"]}}}
 
  :browser-action

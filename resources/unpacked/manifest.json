@@ -382,7 +382,6 @@
     "out/cljs-runtime/chromex.ext.runtime.js",
     "out/cljs-runtime/shadow.module.bg-shared.append.js",
     "out/cljs-runtime/chromex_sample.content_script.core.js",
-    "out/cljs-runtime/chromex_sample.content_script.js",
     "out/cljs-runtime/shadow.module.content-script.append.js"],
    "matches":["<all_urls>"]}],
  "version":"1.0"}
