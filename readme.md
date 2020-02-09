@@ -1,10 +1,48 @@
-# chromex-sample
+# chromex-sample-shadow
 
-### An example extension using Chromex library
+## A basic Chrome extension with Chromex library with shadow-cljs
 
-This project acts as a code example for [chromex library](https://github.com/binaryage/chromex) but also as a skeleton
-with project configuration following best practices. We recommend to use it as a starting point when starting development
-of your own extension.
+## Dev Build using shadow-cljs 
+From within this repo:
+
+* npm install
+* shadow-cljs watch extension
+
+* Open Chrome (ideally Canary) and go to the Extensions page
+* Make sure `Developer mode` is active (upper right corner of the page)
+* Click on `Load unpacked` 
+* Navigate to this repo and to `resources/unpacked` and click `Select`
+
+It should load the extension. 
+
+* You can click on the `background page` link in the extension that showed up in the  extension page
+    * Should popup the devtools window with the output of the background
+    * For some reason I always get:
+  ```
+  Error: Chromex library tried to access a missing Chrome API object 'chrome.runtime.onConnectNative'.
+  ```
+  As far as I can tell that doesn't seem to matter.
+  
+  * You should see log output from the background page like `BACKGROUND init` and log output whenever you open or do Chrome actions
+  
+### MAIN PROBLEM: No Extension Popup with `shadow-cljs`
+* You should see a new extension at the top of the chrome browser with a `C` in it
+* It should be loading the popup.html and related code but it doesn't seem to.
+
+This is the main problem I can not figure out on how to make that work with
+shadow-cljs I thought the `browser-action` entries in `shadow-cljs.edn` would
+set it up, but that doesn't look like its working. This works fine with the
+regular lein / figwheel based chromex-sample code.
+
+Any help with this would be greatly appreciated.
+
+----
+## You can ignore the rest for now, it is the lein/figwheel instructions from the original chromes-sample
+
+This project acts as a code example for [chromex
+library](https://github.com/binaryage/chromex) but also as a skeleton with
+project configuration following best practices. We recommend to use it as a
+starting point when starting development of your own extension.
 
 #### **chromex-sample** has a minimalist **background page**, **popup button** and **content script**:
 
