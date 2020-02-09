@@ -11,3 +11,8 @@
 .figwheel*.log
 .chrome-profile
 .test-dirac-chrome-profile
+.shadow-cljs
+node_modules
+package-lock.json
+resources/unpacked/out
+resources/unpacked/manifest.json

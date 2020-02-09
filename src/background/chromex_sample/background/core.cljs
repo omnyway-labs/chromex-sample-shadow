@@ -73,5 +73,5 @@
 
 (defn init! []
   (log "BACKGROUND: init")
-  (test-storage!)
+  ;(test-storage!)
   (boot-chrome-event-loop!))

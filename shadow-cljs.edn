@@ -11,9 +11,13 @@
    :compiler-options {:closure-output-charset "US-ASCII"}
    :outputs
    {:browser-action {:output-type :chrome/browser-action
-                     :init-fn chromex-sample.popup/init!}
+                     :entries [chromex-sample.popup]}
     :background     {:output-type :chrome/background
-                     :init-fn     chromex-sample.background/init!}
+                     :entries     [chromex-sample.background]}
     :content-script {:output-type :chrome/single-file
-                     :entries     [chromex-sample.content-script]}}}}}
+                     :entries     [chromex-sample.content-script]}}
+   :browser-action
+   {:default-title "Shadow hello world"
+    :default-icon "omnyway_logo.png"
+    :default-popup "popup.html"}}}}
 
