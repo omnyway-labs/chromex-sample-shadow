@@ -25,14 +25,27 @@ It should load the extension.
   
   * You should see log output from the background page like `BACKGROUND init` and log output whenever you open or do Chrome actions
   
-### MAIN PROBLEM: No Extension Popup with `shadow-cljs`
+## PROBLEMS IN PARADISE
+### test-storage is not working
+
+The `(test-storage!)` function called in
+`src/background/chromex-sample/background/background.cljs` fails and I don't
+know why. Right now its commented out. It works fine in the original
+lein/figwheel version.
+
+### No Extension Popup with `shadow-cljs`
 * You should see a new extension at the top of the chrome browser with a `C` in it
+    * I'm not sure where that content is coming from. Seems to be a chrome extension default
 * It should be loading the popup.html and related code but it doesn't seem to.
 
 This is the main problem I can not figure out on how to make that work with
 shadow-cljs I thought the `browser-action` entries in `shadow-cljs.edn` would
 set it up, but that doesn't look like its working. This works fine with the
 regular lein / figwheel based chromex-sample code.
+
+The lein version has the ability to have different output dirs for` popup`,
+`background` and `content-script`. I can't figure out if there is a way to do
+that with `shadow-cljs` and `:chrome-extension` or if its some other issue.
 
 Any help with this would be greatly appreciated.
 
