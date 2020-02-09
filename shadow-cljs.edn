@@ -9,15 +9,5 @@
    :extension-dir    "resources/unpacked"
    :manifest-file    "resources/unpacked/manifest.edn"
    :compiler-options {:closure-output-charset "US-ASCII"}
-   :outputs
-   {:browser-action {:output-type :chrome/browser-action
-                     :entries [chromex-sample.popup]}
-    :background     {:output-type :chrome/background
-                     :entries     [chromex-sample.background]}
-    :content-script {:output-type :chrome/single-file
-                     :entries     [chromex-sample.content-script]}}
-   :browser-action
-   {:default-title "Shadow hello world"
-    :default-icon "icon48.png"
-    :default-popup "popup.html"}}}}
+   }}}
 

@@ -1,11 +1,23 @@
-{:name "Chromex-Sample-Shadow"
- :version "1.0"
- :description ""
+{:name "Chromex-Sample-Shadow" :version "1.0" :description ""
  :manifest-version 2
 
-; :devtools-page "devtools.html"
+ ; :devtools-page "devtools.html"
 
  :permissions ["activeTab" "http://*/*" "https://*/*"]
+ :shadow/outputs {:browser-action
+                  {:init-fn chromex-sample.popup.core/init!}
+
+                  :background
+                  {:init-fn chromex-sample.background.core/init!}
+
+                  :content-script
+                  {:init-fn chromex-sample.content-script.core/init!
+                   :chrome/options {:matches ["<all_urls>"]}}}
+
+ :browser-action
+ {:default-title "Shadow hello world"
+  :default-icon "images/icon48.png"
+  :default-popup "popup.html"}
 
  :content-security-policy
  ["default-src 'self';"
