@@ -18,6 +18,6 @@
                      :entries     [chromex-sample.content-script]}}
    :browser-action
    {:default-title "Shadow hello world"
-    :default-icon "omnyway_logo.png"
+    :default-icon "icon48.png"
     :default-popup "popup.html"}}}}
 
