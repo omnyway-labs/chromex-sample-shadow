@@ -5,8 +5,8 @@
 ## Dev Build using shadow-cljs 
 From within this repo:
 
-* npm install
-* shadow-cljs watch extension
+* `npm install`
+* `shadow-cljs watch extension`
 
 * Open Chrome (ideally Canary) and go to the Extensions page
 * Make sure `Developer mode` is active (upper right corner of the page)
