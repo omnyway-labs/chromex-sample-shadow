@@ -1,5 +1,10 @@
 # chromex-sample-shadow
 
+# **NOTE: This is no longer relavent. Do not use this repo**
+
+**https://github.com/binaryage/chromex/tree/master/examples/shadow has been updated to complete this and now makes it easy to use chromex with shadow-cljs
+
+
 ## A basic Chrome extension with Chromex library with shadow-cljs
 
 ## Dev Build using shadow-cljs 
